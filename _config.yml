@@ -102,11 +102,12 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: git
+  type: git
   repo: git@github.com:pzloveyou/pzloveyou.github.io.git
-- type: git
-  repo: git@gitee.com:xiaozhidage/myblog.git
-  branch: master
+  branch: index
+#- type: git
+#  repo: git@gitee.com:xiaozhidage/myblog.git
+#  branch: master
 
 
 aplayer:
