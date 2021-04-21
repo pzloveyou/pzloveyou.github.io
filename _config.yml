@@ -133,7 +133,7 @@ service_worker:
     - urlPattern: /*
       handler: cacheFirst
       options:
-        origin: https://xiaozhidage.gitee.io/myblog
+        origin: https://www.loveiu.top
 
 
 # offline config passed to sw-precache.

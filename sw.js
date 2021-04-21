@@ -5,7 +5,7 @@ if (workbox) {
 
     workbox.precaching.precache(['/', '/index.html']);
 
-    workbox.routing.registerRoute(new RegExp('^https?://xiaozhidage.gitee.io/myblog?$'), workbox.strategies.networkFirst());
+    workbox.routing.registerRoute(new RegExp('^https?://www.loveiu.top?$'), workbox.strategies.networkFirst());
 
     workbox.routing.registerRoute(new RegExp('.*.html'), workbox.strategies.networkFirst());
 
