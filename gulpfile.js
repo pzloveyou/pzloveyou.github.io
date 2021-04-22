@@ -19,7 +19,7 @@ gulp.task('generate-service-worker', () => {
         swDest: './public/sw.js',
         globDirectory: './public',
         globPatterns: [
-            "**/*.{html,css,js,json,woff2,jpg,jpeg,png}"
+            "**/*.{html,css,js,json,woff2}"
         ],
         modifyURLPrefix: {
             "": "./"
@@ -27,7 +27,7 @@ gulp.task('generate-service-worker', () => {
     });
 });
 
-gulp.task("build", gulp.series("generate-service-worker"));
+
 
 
 // minify js - babel（ 如果不是使用bebel,把下面註釋掉）
@@ -55,7 +55,9 @@ gulp.task('compress', () =>
 // css
 gulp.task('minify-css', () => {
     return gulp.src('./public/**/*.css')
-        .pipe(cleanCSS())
+        .pipe(cleanCSS({
+            compatibility: 'ie11'
+        }))
         .pipe(gulp.dest('./public'))
 })
 
@@ -90,6 +92,7 @@ gulp.task('minify-images', async () => {
 })
 
 // 執行 gulp 命令時執行的任務
-gulp.task('default', gulp.parallel(
-    'compress', 'minify-css', 'minify-html', 'minify-images'
-))
+gulp.task("default", gulp.series("generate-service-worker", gulp.parallel(
+    'compress','minify-html', 'minify-css', 'minify-images'
+)));
+
