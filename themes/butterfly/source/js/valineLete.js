@@ -38,7 +38,7 @@
  *
  */
 
-document.innerHTML="<script src=\"https://libs.baidu.com/jquery/2.1.4/jquery.min.js\"></script>"
+ document.innerHTML="<script src=\"https://libs.baidu.com/jquery/2.1.4/jquery.min.js\"></script>"
 
 
 !function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.Valine=t():e.Valine=t()

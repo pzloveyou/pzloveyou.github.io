@@ -123,18 +123,56 @@ nofollow:
     - 'exclude2.com'
 
 # offline config passed to sw-precache.
-#service_worker:
-#  maximumFileSizeToCacheInBytes: 52428800
-#  staticFileGlobs:
-#    - public/**/*.{js,html,css,png,jpg,gif,jpeg,svg,webp,eot,ttf,woff,woff2}
-#  stripPrefix: public
-#  verbose: true
-#  runtimeCaching:
-#    - urlPattern: /*
-#      handler: cacheFirst
-#      options:
-#        origin: https://www.loveiu.top
+service_worker:
+  maximumFileSizeToCacheInBytes: 52428800
+  staticFileGlobs:
+    - /**/*.{js,html,css,png,jpg,gif,jpeg,svg,webp,eot,ttf,woff,woff2}
+    - /js/*.js
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdn.jsdelivr.net
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdn.bootcss.com
 
+
+
+
+#pwa:
+#  manifest:
+#    path: /manifest.json
+#    body:
+#      name: xiaohi
+#      short_name: iu的小迷弟
+#      theme_color: '#49b1f5'
+#      background_color: '#49b1f5'
+#      display: standalone
+#      orientation: portrait
+#      scope: /
+#      start_url: /
+#  serviceWorker:
+#    path: /sw.js
+#    preload:
+#      urls:
+#        - /
+#      posts: 12
+#    opts:
+#      networkTimeoutSeconds: 30
+#    routes:
+#      - pattern: !!js/regexp /hm.baidu.com/
+#        strategy: networkOnly
+#      - pattern: !!js/regexp /www.google-analytics.com/
+#        strategy: networkOnly
+#      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
+#        strategy: cacheFirst
+#      - pattern: !!js/regexp /\//
+#        strategy: networkFirst
+#    priority: 5
 
 # offline config passed to sw-precache.
 #offline:

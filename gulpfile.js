@@ -10,24 +10,24 @@ const imagemin = require('gulp-imagemin')
 const uglify = require('gulp-uglify')
 const babel = require('gulp-babel')
 
-const workbox = require("workbox-build");
+// const workbox = require("workbox-build");
+//
+// // pwa
+// gulp.task('generate-service-worker', () => {
+//     return workbox.injectManifest({
+//         swSrc: './sw-template.js',
+//         swDest: './public/sw.js',
+//         globDirectory: './public',
+//         globPatterns: [
+//             "**/*.{html,css,js,json,woff2}"
+//         ],
+//         modifyURLPrefix: {
+//             "": "./"
+//         }
+//     });
+// });
 
-// pwa
-gulp.task('generate-service-worker', () => {
-    return workbox.injectManifest({
-        swSrc: './sw-template.js',
-        swDest: './public/sw.js',
-        globDirectory: './public',
-        globPatterns: [
-            "**/*.{html,css,js,json,woff2}"
-        ],
-        modifyURLPrefix: {
-            "": "./"
-        }
-    });
-});
-
-
+// gulp.task("build",gulp.series("generate-service-worker"));
 
 
 // minify js - babel（ 如果不是使用bebel,把下面註釋掉）
@@ -92,7 +92,7 @@ gulp.task('minify-images', async () => {
 })
 
 // 執行 gulp 命令時執行的任務
-gulp.task("default", gulp.series("generate-service-worker", gulp.parallel(
+gulp.task("default",gulp.parallel(
     'compress','minify-html', 'minify-css', 'minify-images'
-)));
+));
 

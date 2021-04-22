@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.loveiu.top/pwa/manifest.json</loc>
+    
+    <lastmod>2021-04-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.loveiu.top/imgs/index.html</loc>
     
     <lastmod>2021-04-22</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://www.loveiu.top/2021/04/13/%E6%9D%8E%E7%9F%A5%E6%81%A9%E7%9A%84%E7%94%B7%E6%9C%8B%E5%8F%8B/</loc>
     
     <lastmod>2021-04-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.loveiu.top/pwa/manifest.json</loc>
-    
-    <lastmod>2021-04-17</lastmod>
     
   </url>
   
@@ -95,14 +95,14 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/tags/iu-%E6%98%8E%E6%98%9F-%E7%94%B7%E7%9B%86%E5%8F%8B/</loc>
+    <loc>https://www.loveiu.top/tags/iu-%E6%98%8E%E6%98%9F/</loc>
     <lastmod>2021-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/tags/iu-%E6%98%8E%E6%98%9F/</loc>
+    <loc>https://www.loveiu.top/tags/iu-%E6%98%8E%E6%98%9F-%E7%94%B7%E7%9B%86%E5%8F%8B/</loc>
     <lastmod>2021-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -118,14 +118,14 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/categories/%E6%9D%8E%E7%9F%A5%E6%81%A9/</loc>
+    <loc>https://www.loveiu.top/categories/IU-iu/</loc>
     <lastmod>2021-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/categories/IU-iu/</loc>
+    <loc>https://www.loveiu.top/categories/%E6%9D%8E%E7%9F%A5%E6%81%A9/</loc>
     <lastmod>2021-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
