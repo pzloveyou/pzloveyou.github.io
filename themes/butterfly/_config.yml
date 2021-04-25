@@ -12,7 +12,7 @@ menu:
    标签: /tags/ || fas fa-tags
    分类: /categories/ || fas fa-folder-open
    列表||fas fa-list:
-     音乐: /music/ || fas fa-music
+     网易云音乐: https://music-kappa.vercel.app/#/discovery || fas fa-music
      电影: /movies/ || fas fa-video
      图库: /imgs/ ||fa fa-image
    友链: /link/ || fas fa-link
@@ -419,7 +419,7 @@ footer:
   owner:
     enable: true
     since: 2021
-  custom_text: <a href="https://www.loveiu.top">Hi,欢迎来到我的博客></a>
+  custom_text: <a href="/">Hi,欢迎来到我的博客></a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -827,7 +827,6 @@ note:
 pjax:
   enable: true
   exclude:
-     - /music/
      - /img/
      - /image/
 
@@ -892,7 +891,7 @@ inject:
     - <link rel="manifest" href="/pwa/manifest.json">
   bottom:
     - '<style type="text/css">#toggle-sidebar {left:100px}</style>'
-    - '<div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>'
+    - '<div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>'
 
 
 # CDN
