@@ -7,9 +7,9 @@ comments: false
 
 
 <div class="gallery-group-main">
-{% galleryGroup '壁紙' '收藏的一些壁紙' '/imgs/img' https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %}
-{% galleryGroup '漫威' '關於漫威的圖片' '/Gallery/marvel' https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg %}
-{% galleryGroup 'OH MY GIRL' '關於OH MY GIRL的圖片' '/Gallery/ohmygirl' https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg %}
+{% galleryGroup '网站的图片' '网站所使用的所有图片在这里哦' '/imgs/img' /./image/wallhaven-l38kvy.jpg %}
+{% galleryGroup '剃刀党' 'by order of the razor party' '/imgs/img_two' /./image/wallhaven-8o5lgy_1920x1080.jpg%}
+{% galleryGroup 'OH MY GIRL' '关于OH MY GIRL的图片' '/imgs/img_three' /./image/wallhaven-pko8lm_1920x1080.jpg %}
 </div>
 
 

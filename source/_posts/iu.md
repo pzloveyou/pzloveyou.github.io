@@ -6,7 +6,7 @@ tags:
   -iu
   -明星
 keywords: "iu,明星"  
-cover: /./image/wallhaven-e7xeew.jpg
+cover: /./image/v21440w.jpg
 toc_number: true
 toc: false
 categories: "IU,iu"

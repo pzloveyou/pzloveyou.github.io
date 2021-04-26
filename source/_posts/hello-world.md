@@ -5,7 +5,7 @@ tags:
   -Hexo
   -教程
 keywords: "Hexo,教程"  
-cover: /./image/wallhaven-v9qyql.jpg
+cover: /./image/wallhaven-l38kvy.jpg
 toc_number: true
 toc: false
 categories: hello-world

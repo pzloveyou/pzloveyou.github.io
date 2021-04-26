@@ -1,22 +1,16 @@
 ---
-title: 图片相册
+title: 博客相册
 top_img:
 comments: false
 ---
 
 
 
-
+ 
 {% gallery %}
-markdown 圖片格式
-{% endgallery %}    
-{% gallery %}
-![](https://i.loli.net/2019/12/25/Fze9jchtnyJXMHN.jpg)
-![](https://i.loli.net/2019/12/25/ryLVePaqkYm4TEK.jpg)
-![](https://i.loli.net/2019/12/25/gEy5Zc1Ai6VuO4N.jpg)
-![](https://i.loli.net/2019/12/25/d6QHbytlSYO4FBG.jpg)
-![](https://i.loli.net/2019/12/25/6nepIJ1xTgufatZ.jpg)
-![](https://i.loli.net/2019/12/25/E7Jvr4eIPwUNmzq.jpg)
-![](https://i.loli.net/2019/12/25/mh19anwBSWIkGlH.jpg)
-![](https://i.loli.net/2019/12/25/2tu9JC8ewpBFagv.jpg)
+![](/./image/wallhaven-l38kvy.jpg)
+![](/./image/v21440w.jpg)
+![](/./image/40w.jpg)
+![](/./image/1609046896790.jpg)
+![](/./image/wallhaven-wqery6_1920x1080.jpg)
 {% endgallery %}

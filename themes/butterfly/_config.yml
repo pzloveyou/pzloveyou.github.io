@@ -18,8 +18,8 @@ menu:
    友链: /link/ || fas fa-link
    关于: /about/ || fas fa-heart
    其他链接||fas fa-list:
-      Gitee Page: https://xiaozhidage.gitee.io ||
-      Github Page: https://pzloveyou.github.io ||
+      Gitee Page: https://xiaozhidage.gitee.io || fab
+      Github Page: https://pzloveyou.github.io || fab fa-github
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -531,7 +531,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:  url(/./image/wallhaven-l38kvy.jpg)
+background:  url(/./image/wallhaven-wqery6_1920x1080.jpg)
 
   #url(/myblog/./image/wallhaven-l38kvy.png)
 #  linear-gradient(
@@ -685,7 +685,7 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
+      icon:
       text: Gitee
       link: https://gitee.com/xiaozhidage/
   card_announcement:
