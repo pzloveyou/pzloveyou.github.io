@@ -17,6 +17,9 @@ menu:
      图库: /imgs/ ||fa fa-image
    友链: /link/ || fas fa-link
    关于: /about/ || fas fa-heart
+   其他链接||fas fa-list:
+      Gitee Page: https://xiaozhidage.gitee.io ||
+      Github Page: https://pzloveyou.github.io ||
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -886,7 +889,7 @@ css_prefix: true
 inject:
   head:
     - <meta name="viewport">
-    - <link rel="stylesheet" href="https://at.alicdn.com/t/font_2492531_o509kifkor.css">
+    - <link rel="stylesheet" href="https://at.alicdn.com/t/font_2492531_1ysgukl1n7n.css">
     - <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     - <link rel="manifest" href="/pwa/manifest.json">
   bottom:
