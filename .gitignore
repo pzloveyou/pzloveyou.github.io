@@ -6,3 +6,7 @@ db.json
 .idea/
 node_modules/
 public/
+<<<<<<< HEAD
+=======
+package-lock.json
+>>>>>>> 0e5d36bf2d3cf407ee7db4539255485e83d52824
