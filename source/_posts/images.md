@@ -9,6 +9,7 @@ cover: /./image/640.png
 toc_number: true
 toc: false
 categories: "image"
+top_img: transparent
 ---
 
 

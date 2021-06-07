@@ -10,6 +10,7 @@ cover: /./image/v21440w.jpg
 toc_number: true
 toc: false
 categories: "IU,iu"
+top_img: transparent
 ---
 
 
