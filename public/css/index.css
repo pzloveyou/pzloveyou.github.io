@@ -3535,10 +3535,10 @@ blockquote footer cite:before {
   position: relative;
   padding: 2rem 1rem;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 #footer-wrap a {
-  color: #fff;
+  color: #000;
 }
 #footer-wrap a:hover {
   text-decoration: underline;
