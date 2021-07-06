@@ -142,6 +142,11 @@ service_worker:
 
 
 
+baidu_url_submit:
+  count: 10               # 提交最新的多少个链接
+  host: www.loveiu.com    # 在百度站长平台中添加的域名
+  token: hailv56c93aM17b4      # 秘钥
+  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
 
 #pwa:
 #  manifest:
