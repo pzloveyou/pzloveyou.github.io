@@ -5,7 +5,7 @@ tags:
   -image
   -图片
 keywords: "图片,image"  
-cover: /./image/640.png
+cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/640.png
 toc_number: true
 toc: false
 date: 2021-04-13 00:00:00
@@ -15,8 +15,15 @@ top_img: transparent
 ---
 
 
-### 存几个个图片网站，我大部分图片也是源自那个地方，都蛮好看的。
+### 存几个个图片网站，我大部分图片也是源自那个地方，我觉得还不错.
 
-   宝藏地址: https://wallhaven.cc/    https://unsplash.com/   https://wallpapercave.com/
+   宝藏地址:  
+   1.<https://wallhaven.cc/>   
+   [![RHO0r6.png](https://z3.ax1x.com/2021/07/07/RHO0r6.png)](https://imgtu.com/i/RHO0r6) 
+   2.<https://unsplash.com/>   
+   [![RHOwKx.png](https://z3.ax1x.com/2021/07/07/RHOwKx.png)](https://imgtu.com/i/RHOwKx)
+   3.<https://wallpapercave.com/>
+   [![RHOax1.png](https://z3.ax1x.com/2021/07/07/RHOax1.png)](https://imgtu.com/i/RHOax1)
+  
    
->提示：要是也是用在网站上，下载完可以压缩下。我用的是个[Caesium](https://saerasoft.com/caesium/)，可以在线压缩，下载工具压缩，还不错。
+   

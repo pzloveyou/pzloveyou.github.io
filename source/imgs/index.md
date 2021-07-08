@@ -7,9 +7,9 @@ comments: false
 
 
 <div class="gallery-group-main">
-{% galleryGroup '网站的图片' '网站所使用的所有图片在这里哦' '/imgs/img' /./image/wallhaven-l38kvy.jpg %}
-{% galleryGroup '剃刀党' 'by order of the razor party' '/imgs/img_two' /./image/wallhaven-8o5lgy_1920x1080.jpg%}
-{% galleryGroup 'OH MY GIRL' '关于OH MY GIRL的图片' '/imgs/img_three' /./image/wallhaven-pko8lm_1920x1080.jpg %}
+{% galleryGroup '网站的图片' '网站所使用的所有图片在这里哦' '/imgs/img' https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-l38kvy.jpg %}
+{% galleryGroup '剃刀党' 'by order of the razor party' '/imgs/img_two' https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-8o5lgy_1920x1080.jpg%}
+{% galleryGroup 'OH MY GIRL' '关于OH MY GIRL的图片' '/imgs/img_three' https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-pko8lm_1920x1080.jpg %}
 </div>
 
 
