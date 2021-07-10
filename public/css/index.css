@@ -2,6 +2,7 @@
 
 }
 
+
 .img_qq{
     border-radius: 50%;
     height:100px;
@@ -3585,7 +3586,7 @@ blockquote footer cite:before {
 }
 #page-header #site-title {
   margin: 0;
-  color: #858585;
+  color: #fffdfd;
   font-size: 1.85em;
 }
 @media screen and (min-width: 768px) {
@@ -3594,7 +3595,7 @@ blockquote footer cite:before {
   }
 }
 #page-header #site-subtitle {
-  color: #858585;
+  color: #fffdfd;
   font-size: 1.15em;
 }
 @media screen and (min-width: 768px) {
@@ -3698,7 +3699,7 @@ blockquote footer cite:before {
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
 }
 #page-header.not-top-img #nav a {
-  color: #4c4948;
+  color: #c5c5c5;
   text-shadow: none;
 }
 #page-header.nav-fixed #nav {

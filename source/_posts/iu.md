@@ -8,7 +8,6 @@ tags:
 keywords: "iu,明星"  
 cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/v21440w.jpg
 toc_number: true
-toc: false
 date: 2021-04-13 00:00:00
 updated:
 categories: "IU,iu"

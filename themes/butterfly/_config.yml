@@ -12,7 +12,7 @@ menu:
    标签: /tags/ || fas fa-tags
    分类: /categories/ || fas fa-folder-open
    列表||fas fa-list:
-     网易云音乐: https://music-kappa.vercel.app/#/discovery || fas fa-music
+     音乐: /music/ || fas fa-music
      电影: /movies/ || fas fa-video
      图库: /imgs/ ||fa fa-image
      动漫: /demo/dm/动漫.html || iconfont icon-tupian
@@ -47,12 +47,11 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/pzloveyou || Github
-  iconfont  icon-gitee-fill-round: https://gitee.com/xiaozhidage || Gitee
+  iconfont icon-GitHub1-copy: https://github.com/pzloveyou || Github
+  iconfont icon-gitee-copy: https://gitee.com/xiaozhidage || Gitee
 
 # search (搜索)
 # --------------------------------------
-
 # Algolia search
 algolia_search:
   enable: false
@@ -102,11 +101,11 @@ avatar:
 # 是否禁用横幅图片
 disable_top_img: false
 
-# The banner image of home page
-index_img: transparent
+# 首页横图片  transparent(透明)
+index_img: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-57z9j9_1920x1080.png
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: transparent
 
 # The banner image of archive page
 archive_img: transparent
@@ -128,7 +127,7 @@ category_img: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/2/wallhaven-6od2lq
 # The banner image of category page
 # format:
 #  - category name: xxxxx
-category_per_img:
+category_per_img: transparent
 
 cover:
   # display the cover or not (是否顯示文章封面)
@@ -713,8 +712,8 @@ aside:
 # busuanzi count for PV / UV in site
 # 訪問人數
 busuanzi:
-  site_uv: true
-  site_pv: true
+  site_uv: false
+  site_pv: false
   page_pv: true
 
 # Time difference between publish date and now (網頁運行時間)
@@ -725,13 +724,13 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
   avatar: true
   # You can only choose one, or neither
-  valine: false
+  valine: true
   github_issues:
     enable: false
     repo:
@@ -881,7 +880,7 @@ inject:
   head:
     - <meta name="viewport">
     - <link rel="stylesheet" href="https://at.alicdn.com/t/font_2492531_8fw76pwhl1n.css">
-    - <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    - <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     - <link rel="manifest" href="/pwa/manifest.json">
     - <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   bottom:
