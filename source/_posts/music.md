@@ -4,8 +4,8 @@ aplayer: true
 tags:
   -music
   -音乐
-keywords: "图片,image"  
-cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-y85z5g_1920x1080.png
+keywords: "hexo音乐,hexo音乐配置hexo-buffter"  
+cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-y85z5g_1920x1080.jpg
 toc_number: true
 date: 2021-07-10 11:17:00
 updated:

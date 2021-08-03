@@ -1,7 +1,6 @@
 ---
 title: IU
 aplayer: true
-sticky: 1
 tags:
   -iu
   -明星
