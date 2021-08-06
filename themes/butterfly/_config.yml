@@ -99,7 +99,7 @@ avatar:
 
 # Disable all banner image
 # 是否禁用横幅图片
-disable_top_img: false
+disable_top_img: true
 
 # 首页横图片  transparent(透明)
 index_img: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-57z9j9_1920x1080.jpg
