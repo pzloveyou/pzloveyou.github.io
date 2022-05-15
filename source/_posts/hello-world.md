@@ -5,7 +5,7 @@ tags:
   -Hexo
   -教程
 keywords: "Hexo,教程"  
-cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-l38kvy.jpg
+cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-l38kvy.jpg
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:

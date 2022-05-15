@@ -5,7 +5,7 @@ tags:
   -image
   -图片
 keywords: "图片,image"  
-cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/640.png
+cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/640.png
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:

@@ -12,4 +12,7 @@ aside: false
 comments: false
 ---
 
-<a href="圣诞树.html"></a>
+<audio id="audio_music" src="圣诞快乐（纯音乐）.mp3" autoplay="autoplay" loop></audio>
+<div style="text-align: center;"  id="sl">
+    <canvas id="c" style="height: 120%;width:60%;"></canvas>
+</div>

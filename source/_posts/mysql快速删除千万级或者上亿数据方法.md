@@ -6,7 +6,7 @@ tags:
   -mysql
   -技术
 keywords: "MySQL数据库如何快速删除千万，亿条数据,mysql删除"
-cover: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-m91yg1_3840x2160.png
+cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/wallhaven-m91yg1_3840x2160.png
 top_img: transparent
 toc_number: true
 aside: false

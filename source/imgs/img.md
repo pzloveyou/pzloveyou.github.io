@@ -8,9 +8,9 @@ comments: false
 
  
 {% gallery %}
-![](https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-l38kvy.jpg)
-![](https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/v21440w.jpg)
-![](https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/40w.jpg)
-![](https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/1609046896790.jpg)
-![](https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-wqery6_1920x1080.jpg)
+![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-l38kvy.jpg)
+![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/v21440w.jpg)
+![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/40w.jpg)
+![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/1609046896790.jpg)
+![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-wqery6_1920x1080.jpg)
 {% endgallery %}

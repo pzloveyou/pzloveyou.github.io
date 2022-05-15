@@ -5,5 +5,5 @@ comments: false
 ---
 
 {% gallery %}
-![](https://cdn.jsdelivr.net/gh/pzloveyou/cdn/image/wallhaven-8o5lgy_1920x1080.jpg)
+![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-8o5lgy_1920x1080.jpg)
 {% endgallery %}
