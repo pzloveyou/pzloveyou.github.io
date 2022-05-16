@@ -938,7 +938,7 @@ CDN:
 
   # count
   #busuanzi: https://cdn.jsdelivr.net/gh/pzloveyou/cdn/js/busuanzi.pure.mini.js
-  busuanzi: http://xiaozhidage.gitee.io/image_treasure-house/js/busuanzi.pure.mini.js
+  busuanzi: https://xiaozhidage.gitee.io/image_treasure-house/js/busuanzi.pure.mini.js
 
   # background effect
   canvas_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js
