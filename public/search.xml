@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>Mongodb 集群部署</title>
+      <link href="2022/05/17/Mongodb%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/"/>
+      <url>2022/05/17/Mongodb%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mongodb-集群部署"><a href="#Mongodb-集群部署" class="headerlink" title="Mongodb 集群部署"></a>Mongodb 集群部署</h1><p><strong>Mongodb 版本&gt;=4.2windows不以服务式安装</strong></p><h4 id="一、安装完成后设置目录下data里面间分区"><a href="#一、安装完成后设置目录下data里面间分区" class="headerlink" title="一、安装完成后设置目录下data里面间分区"></a>一、安装完成后设置目录下data里面间分区</h4><p>1.建立mongodb1文件夹</p><p>2.在mongodb1下建立 conf与log文件夹</p><p>3.在conf文件夹下建立 mongodb.conf</p><p>内容为：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dbpath=D:\BtSoft\mongodb\data\mongodb1 #修改路径</span><br><span class="line">logpath=D:\BtSoft\mongodb\data\mongodb1\log\mongodb.log #修改路径</span><br><span class="line">logappend=true</span><br><span class="line">bind_ip=0.0.0.0</span><br><span class="line">port=27011 #修改端口</span><br><span class="line">shardsvr=true</span><br><span class="line">journal=true</span><br><span class="line">replSet=skeqi</span><br></pre></td></tr></table></figure><p>3.复制mongodb1为 mongodb2 mongodb3 并分别修改 mongodb.conf 里的路径与端口（同样操作）</p><h4 id="二、准备启动"><a href="#二、准备启动" class="headerlink" title="二、准备启动"></a>二、准备启动</h4><p>进入mongod\bin下，使用管理员启动cmd分别输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb1\conf\mongodb.conf --install --serviceName &quot;MongoDB1&quot;</span><br><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb2\conf\mongodb.conf --install --serviceName &quot;MongoDB2&quot;</span><br><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb3\conf\mongodb.conf --install --serviceName &quot;MongoDB3&quot;</span><br></pre></td></tr></table></figure><p>然后进入服务，打开对应的3个MongoDB</p><p>在cmd（mongod\bin目录下）输入 mongo –port 27011</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use admin;</span><br><span class="line">cfg = &#123;_id: &quot;skeqi&quot;,members:[&#123;_id: 0,host: &#x27;192.168.7.27:27011&#x27;,priority: 2&#125;,&#123;_id: 1,host: &#x27;192.168.7.27:27012&#x27;,priority: 1&#125;,&#123;_id: 3,host: &#x27;192.168.7.27:27013&#x27;,arbiterOnly: true&#125;]&#125;;</span><br><span class="line">rs.initiate(cfg)</span><br><span class="line">rs.status()</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> -Windows -技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mongodb服务教程</title>
+      <link href="2022/05/17/Mongod%E6%9C%8D%E5%8A%A1%E6%95%99%E7%A8%8B/"/>
+      <url>2022/05/17/Mongod%E6%9C%8D%E5%8A%A1%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-Mongodb服务教程"><a href="#1-Mongodb服务教程" class="headerlink" title="1.Mongodb服务教程"></a>1.Mongodb服务教程</h3><p>​    </p><pre><code>进入页面  https://www.mongodb.com/download-center/community ，我安装这个版本</code></pre><p>选择如下：<img src="/./img/mon/20200405141039793.png"></p><p>   下载后文件如右 ： <img src="/./img/mon/20200405141118829.png"></p><p>   双击开始安装（以下几步注意，其他全部next）：</p><img src="/./img/mon/20200405141302768.png" style="zoom:50%;" /><p> 这里我选择的是自定义安装，选择你想安装到的位置</p><img src="/./img/mon/20200405141441759.png" style="zoom:50%;" /><p> 点击ok，然后点击next 点击之后 新版的Mongodb会主动在安装目录下创建log和data文件，这相比较早期版本有了改善 ，早期需要自己手动创建  <strong>但我们仍然需要在data下创建db文件夹   笔者的在E:\MongoDB\data\db（记住一定要再建个db文件夹）</strong></p><p><img src="/./img/mon/20200405141711725.png"></p><p> <strong>重重之重（下图一定要取消安装，compass客户端可视化界面我会另外下载。你要是选中了，那就是安装了一天也完成不了）</strong></p><p><img src="/./img/mon/20200405141917239.png"></p><p> 最后安装成功会弹出一个警告框，选中 Ignore 就好</p><p><img src="/./img/mon/2020040514190079.png"></p><p> 至此，MongoDB客户端已经安装完毕</p><p><strong>由于我们已经创建了C:\MongoDB\data\db文件夹  这里就不需要再创建  否者还要创建  然后在cmd进入C:\MongoDB\bin目录下（在windows资源管理器中shift+右键打开powershell也行）然后执行mongod -dbpath C:\MongoDB\data\db 命令  如下图（这条命令是开启服务，它会一直运行，只要你要使用Mongodb，这个窗口就不能关）</strong></p><p><img src="/./img/mon/20200405142808709.png"></p><pre><code>然后在bin目录下另外打开一个cmd  在bin目录下执行mongo命令，之后就能正常使用了！！！</code></pre><p><img src="/./img/mon/20200405143056560.png"></p><p> 正如你所看到的，以上步骤已经可以完全实现使用MongoDB的需求。你要是想的话可以继续安装可视化界面，毕竟操作起来更方便。</p><h3 id="2-开始安装MongoDB-Compass："><a href="#2-开始安装MongoDB-Compass：" class="headerlink" title="2.开始安装MongoDB Compass："></a>2.开始安装MongoDB Compass：</h3><p>直接解压缩：</p><p><img src="/./img/mon/20200405144015752.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> -Windows -技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows配置FTP</title>
+      <link href="2022/05/17/windows%E9%85%8D%E7%BD%AEftp/"/>
+      <url>2022/05/17/windows%E9%85%8D%E7%BD%AEftp/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-Windows配置FTP"><a href="#1-Windows配置FTP" class="headerlink" title="1.Windows配置FTP"></a>1.Windows配置FTP</h1><blockquote><p>使用win11的来操作，不过和win10差不多一样。</p><p> 注意：<strong>需要其他电脑能通过访问，必须在一个局域网。</strong></p></blockquote><p>​            </p><p>第一步：找到控制面板，找到程序。</p><p><img src="/./img/lat/image-20220415161644677.png" alt="image-20220415161644677"></p><p>打开启动或关闭Windows功能，弹出选择如图所示，确认。</p><p><img src="/./img/lat/image-20220415161856560.png" alt="image-20220415161856560"></p><p>第一次安装可能会重启，重启之后找到IIS服务管理器。（直接搜索iis）</p><p><img src="/./img/lat/image-20220415162257798.png" alt="image-20220415162257798"></p><p>打开点开找到网站，右键网站选择添加FTP站点，并按照如图所示填写。</p><p><img src="/./img/lat/image-20220415162638902.png" alt="image-20220415162638902"></p><p>然后下一步，输入自己的本机ip，无ssl。</p><p><img src="/./img/lat/image-20220415162902342.png" alt="image-20220415162902342"></p><p>然后继续下一页，选择基本的方式，指定用户方式，权限全勾选，完成之后。</p><p><img src="/./img/lat/image-20220415163133913.png" alt="image-20220415163133913"></p><p>完成后选择基本设置，配置特定用户。</p><p><img src="/./img/lat/image-20220415163410074.png" alt="image-20220415163410074"></p><p>用户为之前所指定用户账号，点设置并输入此账号登录密码。</p><p><img src="/./img/lat/image-20220415163558214.png" alt="image-20220415163558214"></p><p>点击测试设置，查看都为绿沟就ok了。</p><p><img src="/./img/lat/image-20220415163647948.png" alt="image-20220415163647948"></p><h2 id="其他设置点"><a href="#其他设置点" class="headerlink" title="其他设置点:"></a>其他设置点:</h2><p>找到防火墙，控制面板\系统和安全\Windows Defender 防火墙\允许的应用，沟选FTP服务和你刚刚所建FTP全勾上,并把后面的沟上。</p><p><img src="/./img/lat/image-20220415164010283.png" alt="image-20220415164010283"></p><p>使用cmd打开，输入ftp 本机ip，输入指定账号，密码，如图所示就是成功了。</p><p><img src="/./img/lat/image-20220415164307698.png" alt="image-20220415164307698"></p><p>然后在文件资源管理器输入 ftp://本机ip 进入到文件夹中。浏览器上输入也可以（第一次都会让你输入用户名和密码，记住之后就可以了吧）</p><p><img src="/./img/lat/image-20220415164552509.png" alt="image-20220415164552509"></p><p>最后打开防火墙配置入站规则，点击高级设置进入，新建规则规则类型选择端口，协议和端口输入之前在ftp默认的21端口</p><p>然后一直下一页就OK了。</p><h1 id="2-nginx映射FTP图片地址"><a href="#2-nginx映射FTP图片地址" class="headerlink" title="2.nginx映射FTP图片地址"></a>2.nginx映射FTP图片地址</h1><blockquote><p>比如nginx文件夹在E盘，ftp或者图片存放在在D盘，前端去加载ftp的图片地址会404；</p></blockquote><h2 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h2><p>​            打开nginx  -   conf   -    nginx.conf，添加如下配置。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location /ftp/ &#123;</span><br><span class="line">alias D:\ftp/;     # 当不在同一目录下使用；同一目标使用root</span><br><span class="line">allow all;</span><br><span class="line">autoindex on;</span><br><span class="line">add_header Access-Control-Allow-Origin *;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>ps:将root后面的地址改成 root D:\imagedata/; 是不起作用的。</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> -Windows -技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mybatis映射LocalDateTime所出现的问题</title>
       <link href="2021/07/28/Mybatis%E6%98%A0%E5%B0%84jdk8-LocaDateTime/"/>
       <url>2021/07/28/Mybatis%E6%98%A0%E5%B0%84jdk8-LocaDateTime/</url>
@@ -34,25 +91,6 @@
         <tags>
             
             <tag> -mysql -技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Windows配置FTP</title>
-      <link href="2021/07/27/windows%E9%85%8D%E7%BD%AEftp/"/>
-      <url>2021/07/27/windows%E9%85%8D%E7%BD%AEftp/</url>
-      
-        <content type="html"><![CDATA[<h1 id="1-windows配置FTP"><a href="#1-windows配置FTP" class="headerlink" title="1.windows配置FTP"></a>1.windows配置FTP</h1><blockquote><p>使用win11的来操作，不过和win10差不多一样。</p><p> 注意：<strong>需要其他电脑能通过访问，必须在一个局域网。</strong></p></blockquote><p>​            </p><p>​            第一步：找到控制面板，找到程序。</p><p>​            <img src="%5Cimg%5Cimage-20220415161644677.png" alt="image-20220415161644677"></p><p>打开启动或关闭Windows功能，弹出选择如图所示，确认。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415161856560.png" alt="image-20220415161856560"></p><p>第一次安装可能会重启，重启之后找到IIS服务管理器。（直接搜索iis）</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415162257798.png" alt="image-20220415162257798"></p><p>打开点开找到网站，右键网站选择添加FTP站点，并按照如图所示填写。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415162638902.png" alt="image-20220415162638902"></p><p>然后下一步，输入自己的本机ip，无ssl。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415162902342.png" alt="image-20220415162902342"></p><p>然后继续下一页，选择基本的方式，指定用户方式，权限全勾选，完成之后。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415163133913.png" alt="image-20220415163133913"></p><p>完成后选择基本设置，配置特定用户。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415163410074.png" alt="image-20220415163410074"></p><p>用户为之前所指定用户账号，点设置并输入此账号登录密码。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415163558214.png" alt="image-20220415163558214"></p><p>点击测试设置，查看都为绿沟就ok了。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415163647948.png" alt="image-20220415163647948"></p><p>其他设置点：找到防火墙，控制面板\系统和安全\Windows Defender 防火墙\允许的应用，沟选FTP服务和你刚刚所建FTP全勾上,并把后面的沟上。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415164010283.png" alt="image-20220415164010283"></p><p>使用cmd打开，输入ftp 本机ip，输入指定账号，密码，如图所示就是成功了。</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415164307698.png" alt="image-20220415164307698"></p><p>然后在文件资源管理器输入 ftp://本机ip 进入到文件夹中。浏览器上输入也可以（第一次都会让你输入用户名和密码，记住之后就可以了吧）</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220415164552509.png" alt="image-20220415164552509"></p><p>最后打开防火墙配置入站规则，点击高级设置进入，新建规则规则类型选择端口，协议和端口输入之前在ftp默认的21端口</p><p>然后一直下一页就OK了。</p><h1 id="2-nginx映射FTP图片地址"><a href="#2-nginx映射FTP图片地址" class="headerlink" title="2.nginx映射FTP图片地址"></a>2.nginx映射FTP图片地址</h1><blockquote><p>比如nginx文件夹在E盘，ftp或者图片存放在在D盘，前端去加载ftp的图片地址会404；</p></blockquote><p>解决：</p><p>​            打开nginx  -   conf   -    nginx.conf，添加如下配置。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location /ftp/ &#123;</span><br><span class="line">alias D:\ftp/;     # 当不在同一目录下使用；同一目标使用root</span><br><span class="line">allow all;</span><br><span class="line">autoindex on;</span><br><span class="line">add_header Access-Control-Allow-Origin *;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>ps:将root后面的地址改成 root D:\imagedata/; 是不起作用的。</strong></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> -Windows -技术 </tag>
             
         </tags>
       
@@ -161,31 +199,6 @@
     
     
     <entry>
-      <title>推荐一个图片网站</title>
-      <link href="2021/04/13/images/"/>
-      <url>2021/04/13/images/</url>
-      
-        <content type="html"><![CDATA[<h3 id="存几个个图片网站"><a href="#存几个个图片网站" class="headerlink" title="存几个个图片网站."></a>存几个个图片网站.</h3><p>   宝藏地址:<br>   1.<a href="https://wallhaven.cc/">https://wallhaven.cc/</a><br>   <a href="https://imgtu.com/i/RHO0r6"><img src="https://z3.ax1x.com/2021/07/07/RHO0r6.png" alt="RHO0r6.png"></a><br>   2.<a href="https://unsplash.com/">https://unsplash.com/</a><br>   <a href="https://imgtu.com/i/RHOwKx"><img src="https://z3.ax1x.com/2021/07/07/RHOwKx.png" alt="RHOwKx.png"></a><br>   3.<a href="https://wallpapercave.com/">https://wallpapercave.com/</a><br>   <a href="https://imgtu.com/i/RHOax1"><img src="https://z3.ax1x.com/2021/07/07/RHOax1.png" alt="RHOax1.png"></a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> image </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> -image -图片 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>IU</title>
       <link href="2021/04/13/iu/"/>
       <url>2021/04/13/iu/</url>
@@ -203,6 +216,31 @@
         <tags>
             
             <tag> -iu -明星 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>推荐一个图片网站</title>
+      <link href="2021/04/13/images/"/>
+      <url>2021/04/13/images/</url>
+      
+        <content type="html"><![CDATA[<h3 id="存几个个图片网站"><a href="#存几个个图片网站" class="headerlink" title="存几个个图片网站."></a>存几个个图片网站.</h3><p>   宝藏地址:<br>   1.<a href="https://wallhaven.cc/">https://wallhaven.cc/</a><br>   <a href="https://imgtu.com/i/RHO0r6"><img src="https://z3.ax1x.com/2021/07/07/RHO0r6.png" alt="RHO0r6.png"></a><br>   2.<a href="https://unsplash.com/">https://unsplash.com/</a><br>   <a href="https://imgtu.com/i/RHOwKx"><img src="https://z3.ax1x.com/2021/07/07/RHOwKx.png" alt="RHOwKx.png"></a><br>   3.<a href="https://wallpapercave.com/">https://wallpapercave.com/</a><br>   <a href="https://imgtu.com/i/RHOax1"><img src="https://z3.ax1x.com/2021/07/07/RHOax1.png" alt="RHOax1.png"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> image </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -image -图片 </tag>
             
         </tags>
       
