@@ -6,14 +6,14 @@ tags:
   -mysql
   -技术
 keywords: "MySQL数据库如何快速删除千万，亿条数据,mysql删除"
-cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/wallhaven-m91yg1_3840x2160_1652668493.jpg
-top_img: transparent
+cover: /img/wallhaven-m91yg1_3840x2160_1652668493.jpg
+top_img: /img/wallhaven-m91yg1_3840x2160_1652668493.jpg
 toc_number: true
-aside: false
-comments: false
+aside: true
+comments: true
 ---
 
-
+## **前情提要** ##
 >MySQL数据库因生产原因需要删除大量数据，因数据量太大接近上亿条，用常规delete删除小数据可以，删除几千万大数据量会非常慢，
 并且不会释放出磁盘空间，还需要optimize或repair来压缩数据表来释放硬盘空间，时间更长，需要几天时间，太慢了！
 因此采用新建表，导入无需删除的数据，然后删除老表，把新表改名为老表，步骤如下：

@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: IU的小迷弟
+title: LOVEIU.TOP
 subtitle: '最好的IU'
 description: 'IU是最帅的  IU@IU'
 keywords: IU的小迷弟,小迷弟,IU,iu,iu的小迷弟
@@ -31,7 +31,7 @@ i18n_dir: :lang
 skip_render:
     - 'demo/*.html'
     - 'demo/**'
-#    - 'wqj/*.html'
+    - 'wqj/*.html'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -146,6 +146,18 @@ service_worker:
       handler: cacheFirst
       options:
         origin: hm.baidu.com
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: unpkg.com
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: unpkg.zhimg.com
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdn.bootcdn.net
 
 
 

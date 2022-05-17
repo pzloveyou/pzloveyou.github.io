@@ -1,15 +1,16 @@
 ---
 title: 图库
 date: 2021-04-03 15:29:53
-top_img: transparent
+top_img: /img/wallhaven-8o5dq2_1652751459.jpg
 comments: false
+aside: false
 ---
 
 
 <div class="gallery-group-main">
-{% galleryGroup '网站的图片' '网站所使用的所有图片在这里哦' '/imgs/img' https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-l38kvy.jpg %}
-{% galleryGroup '剃刀党' 'by order of the razor party' '/imgs/img_two' https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-8o5lgy_1920x1080.jpg%}
-{% galleryGroup 'OH MY GIRL' '关于OH MY GIRL的图片' '/imgs/img_three' https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-pko8lm_1920x1080.jpg %}
+{% galleryGroup '网站的图片' '网站所使用的所有图片在这里哦' '/imgs/img' /img/wallhaven-l38kvy.jpg %}
+{% galleryGroup '剃刀党' 'by order of the razor party' '/imgs/img_two' /img/wallhaven-8o5lgy_1920x1080.jpg %}
+{% galleryGroup 'OH MY GIRL' '关于OH MY GIRL的图片' '/imgs/img_three' /img/wallhaven-pko8lm_1920x1080.jpg %}
 </div>
 
 

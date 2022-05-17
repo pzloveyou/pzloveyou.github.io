@@ -1,14 +1,15 @@
 ---
 title: 博客相册
-top_img:
+top_img: /img/wallhaven-l38kvy.jpg
 comments: false
+aside: false
 ---
 
 
 
  
 {% gallery %}
-![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-l38kvy.jpg)
+![](/img/wallhaven-l38kvy.jpg)
 ![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/v21440w.jpg)
 ![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/40w.jpg)
 ![](https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/1609046896790.jpg)

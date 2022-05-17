@@ -6,11 +6,11 @@ tags:
   -mybatis
   -技术
 keywords: "Mybatis映射LocalDateTime所出现的问题,mybatis映射"
-cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/wallhaven-g7q9el_1920x1080_1652668417.jpg  
-top_img: transparent
+cover: /img/wallhaven-wq1gk7_1920x1080_1652683488.jpg
+top_img: /img/wallhaven-wq1gk7_1920x1080_1652683488.jpg
 toc_number: true
-aside: false
-comments: false
+aside: true
+comments: true
 ---
   ## **Mybatis映射LocalDateTime所出现的问题**
 

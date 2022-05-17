@@ -5,27 +5,28 @@ tags:
   -music
   -音乐
 keywords: "hexo音乐,hexo音乐配置hexo-buffter"  
-cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/wallhaven-y85z5g_1920x1080.jpg
+cover: /img/wallhaven-y85z5g_1920x1080.jpg
 toc_number: true
 date: 2021-07-10 11:17:00
 updated:
 categories: "music"
+aside: true
 top_img: transparent
 ---
 
 >hexo音乐插件 [hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
 >或者看[官方文档](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FMoePlayer%2Fhexo-tag-aplayer%2Fblob%2Fmaster%2Fdocs%2FREADME-zh_cn.md)
 
-#### 1.在md文件使用：
+### 1.在md文件使用: ###
 ```markdown
 {% meting "000PeZCQ1i4XVs" "tencent" "artist" "theme:#3F51B5" "mutex:true" "preload:auto" %}
 ```
 
-#### 2.使用html：
+### 2.使用html: ###
 ```html
  <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
 ```
-#### 3.配置全局吸底
+### 3.配置全局吸底 ###
 >在主题配置文件中找到 **aplayerInject**,**enable**设为**true**和**per_page**设为**true**
 ```yaml
 # Inject the css and script (aplayer/meting)
@@ -47,7 +48,7 @@ inject:
     - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
 ```
 
-#### 调整位置
+### 调整位置 ###
 
 ```css
 #toggle-sidebar {
@@ -57,7 +58,7 @@ inject:
 
 >最后，如果你想切换页面时,音乐不会中断。就把主题配置文件的**pjax**改为**true**
 
-### 参数解释
+### 参数解释 ###
 
 | 选项 | 默认 | 描述 |
 |:----|:----|:----|

@@ -1,8 +1,9 @@
 ---
 title: 音乐
-top_img:
-comments: true
+top_img: /img/wallhaven-wq1gk7_1920x1080_1652683488.jpg
+comments: false
 type: "playlist"
+aside: false
 ---
 #### [站内配置跳转](/2021/07/10/music/)
 

@@ -5,7 +5,7 @@ tags:
   -iu
   -明星
 keywords: "iu,明星"  
-cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/v21440w.jpg
+cover: /img/v21440w.jpg
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:

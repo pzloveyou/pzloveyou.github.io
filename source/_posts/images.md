@@ -5,7 +5,7 @@ tags:
   -image
   -图片
 keywords: "图片,image"  
-cover: https://xiaozhidage.gitee.io/image_treasure-house/hexoimage/image/640.png
+cover: /img/640.png
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:
@@ -14,7 +14,7 @@ top_img: transparent
 ---
 
 
-### 存几个个图片网站，我大部分图片也是源自那个地方，我觉得还不错.
+### 存几个个图片网站.
 
    宝藏地址:  
    1.<https://wallhaven.cc/>   
