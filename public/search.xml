@@ -103,7 +103,7 @@
       <link href="2021/07/10/music/"/>
       <url>2021/07/10/music/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>hexo音乐插件 <a href="https://github.com/MoePlayer/hexo-tag-aplayer">hexo-tag-aplayer</a><br>或者看<a href="https://links.jianshu.com/go?to=https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">官方文档</a></p></blockquote><h3 id="1-在md文件使用"><a href="#1-在md文件使用" class="headerlink" title="1.在md文件使用:"></a>1.在md文件使用:</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;000PeZCQ1i4XVs&quot; &quot;tencent&quot; &quot;artist&quot; &quot;theme:#3F51B5&quot; &quot;mutex:true&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure><h3 id="2-使用html"><a href="#2-使用html" class="headerlink" title="2.使用html:"></a>2.使用html:</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;000PeZCQ1i4XVs&quot;</span> <span class="attr">data-server</span>=<span class="string">&quot;tencent&quot;</span> <span class="attr">data-type</span>=<span class="string">&quot;artist&quot;</span> <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-mini</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-listFolded</span>=<span class="string">&quot;false&quot;</span> <span class="attr">data-order</span>=<span class="string">&quot;random&quot;</span> <span class="attr">data-preload</span>=<span class="string">&quot;none&quot;</span> <span class="attr">data-autoplay</span>=<span class="string">&quot;false&quot;</span> <span class="attr">muted</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="3-配置全局吸底"><a href="#3-配置全局吸底" class="headerlink" title="3.配置全局吸底"></a>3.配置全局吸底</h3><blockquote><p>在主题配置文件中找到 <strong>aplayerInject</strong>,<strong>enable</strong>设为<strong>true</strong>和<strong>per_page</strong>设为<strong>true</strong></p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Inject the css and script (aplayer/meting)</span></span><br><span class="line"><span class="attr">aplayerInject:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><blockquote><p>在hexo配置文件中找到 <strong>aplayer</strong></p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">asset_inject:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><blockquote><p>把aplayer代碼插入到主題配置文件的<strong>inject.bottom</strong>去<br> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;div</span> <span class="string">class=&quot;aplayer</span> <span class="literal">no</span><span class="string">-destroy&quot;</span> <span class="string">data-id=&quot;000PeZCQ1i4XVs&quot;</span> <span class="string">data-server=&quot;tencent&quot;</span> <span class="string">data-type=&quot;artist&quot;</span> <span class="string">data-fixed=&quot;true&quot;</span> <span class="string">data-mini=&quot;true&quot;</span> <span class="string">data-listFolded=&quot;false&quot;</span> <span class="string">data-order=&quot;random&quot;</span> <span class="string">data-preload=&quot;none&quot;</span> <span class="string">data-autoplay=&quot;true&quot;</span> <span class="string">muted&gt;&lt;/div&gt;</span></span><br></pre></td></tr></table></figure></p></blockquote><h3 id="调整位置"><a href="#调整位置" class="headerlink" title="调整位置"></a>调整位置</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#toggle-sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">80px</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>最后，如果你想切换页面时,音乐不会中断。就把主题配置文件的<strong>pjax</strong>改为<strong>true</strong></p></blockquote><h3 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h3><table><thead><tr><th align="left">选项</th><th align="left">默认</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">data-id</td><td align="left">require</td><td align="left">song id / playlist id / album id / search keyword</td></tr><tr><td align="left">data-server</td><td align="left">require</td><td align="left">music platform: netease, tencent, kugou, xiami, baidu</td></tr><tr><td align="left">data-type</td><td align="left">require</td><td align="left">song, playlist, album, search, artist</td></tr><tr><td align="left">data-fixed</td><td align="left">false</td><td align="left">enable fixed mode</td></tr><tr><td align="left">data-mini</td><td align="left">false</td><td align="left">enable mini mode</td></tr><tr><td align="left">data-autoplay</td><td align="left">false</td><td align="left">audio autoplay</td></tr><tr><td align="left">data-theme</td><td align="left">#2980b9</td><td align="left">main color</td></tr><tr><td align="left">data-loop</td><td align="left">all</td><td align="left">player loop play, values: ‘all’, ‘one’, ‘none’</td></tr><tr><td align="left">data-order</td><td align="left">list</td><td align="left">player play order, values: ‘list’, ‘random’</td></tr><tr><td align="left">data-preload</td><td align="left">auto</td><td align="left">values: ‘none’, ‘metadata’, ‘auto</td></tr><tr><td align="left">data-volume</td><td align="left">0.7</td><td align="left">default volume, notice that player will remember user setting, default volume will not work after user set volume themselves</td></tr><tr><td align="left">data-mutex</td><td align="left">true</td><td align="left">prevent to play multiple player at the same time, pause other players when this player start play</td></tr><tr><td align="left">data-lrctype</td><td align="left">0</td><td align="left">lyric type</td></tr><tr><td align="left">data-listfolded</td><td align="left">false</td><td align="left">indicate whether list should folded at first</td></tr><tr><td align="left">data-listmaxheight</td><td align="left">340px</td><td align="left">list max height</td></tr><tr><td align="left">data-storagename</td><td align="left">metingjs</td><td align="left">localStorage key that store player setting</td></tr></tbody></table><blockquote><p>require代表着這些參數是必須要使用的，其它的參數則可以根據自己需要配置。</p></blockquote><blockquote><p>配置全局吸底，data-fixed和data-mini也必須配置，配置為true</p></blockquote><blockquote><p>如果使用Pjax，則在class裏需添加no-destroy，這樣防止切換頁面時Aplayer被銷毀</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>hexo音乐插件 <a href="https://github.com/MoePlayer/hexo-tag-aplayer">hexo-tag-aplayer</a><br>或者看<a href="https://links.jianshu.com/go?to=https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">官方文档</a></p></blockquote><h3 id="1-在md文件使用"><a href="#1-在md文件使用" class="headerlink" title="1.在md文件使用:"></a>1.在md文件使用:</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;000PeZCQ1i4XVs&quot; &quot;tencent&quot; &quot;artist&quot; &quot;theme:#3F51B5&quot; &quot;mutex:true&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure><h3 id="2-使用html"><a href="#2-使用html" class="headerlink" title="2.使用html:"></a>2.使用html:</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aplayer no-destroy&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;000PeZCQ1i4XVs&quot;</span> <span class="attr">data-server</span>=<span class="string">&quot;tencent&quot;</span> <span class="attr">data-type</span>=<span class="string">&quot;artist&quot;</span> <span class="attr">data-fixed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-mini</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-listFolded</span>=<span class="string">&quot;false&quot;</span> <span class="attr">data-order</span>=<span class="string">&quot;random&quot;</span> <span class="attr">data-preload</span>=<span class="string">&quot;none&quot;</span> <span class="attr">data-autoplay</span>=<span class="string">&quot;false&quot;</span> <span class="attr">muted</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="3-配置全局吸底"><a href="#3-配置全局吸底" class="headerlink" title="3.配置全局吸底"></a>3.配置全局吸底</h3><blockquote><p>在主题配置文件中找到 <strong>aplayerInject</strong>,<strong>enable</strong>设为<strong>true</strong>和<strong>per_page</strong>设为<strong>true</strong></p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Inject the css and script (aplayer/meting)</span></span><br><span class="line"><span class="attr">aplayerInject:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><blockquote><p>在hexo配置文件中找到 <strong>aplayer</strong></p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">asset_inject:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><blockquote><p>把aplayer代碼插入到主題配置文件的<strong>inject.bottom</strong>去<br> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;div</span> <span class="string">class=&quot;aplayer</span> <span class="literal">no</span><span class="string">-destroy&quot;</span> <span class="string">data-id=&quot;000PeZCQ1i4XVs&quot;</span> <span class="string">data-server=&quot;tencent&quot;</span> <span class="string">data-type=&quot;artist&quot;</span> <span class="string">data-fixed=&quot;true&quot;</span> <span class="string">data-mini=&quot;true&quot;</span> <span class="string">data-listFolded=&quot;false&quot;</span> <span class="string">data-order=&quot;random&quot;</span> <span class="string">data-preload=&quot;none&quot;</span> <span class="string">data-autoplay=&quot;true&quot;</span> <span class="string">muted&gt;&lt;/div&gt;</span></span><br></pre></td></tr></table></figure></p></blockquote><h3 id="调整位置"><a href="#调整位置" class="headerlink" title="调整位置"></a>调整位置</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#toggle-sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">80px</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>最后，如果你想切换页面时,音乐不会中断。就把主题配置文件的<strong>pjax</strong>改为<strong>true</strong></p></blockquote><h3 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h3><table><thead><tr><th align="left">选项</th><th align="left">默认</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">data-id</td><td align="left">必须值</td><td align="left">歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td></tr><tr><td align="left">data-server</td><td align="left">必须值</td><td align="left">音乐平台: netease, tencent, kugou, xiami, baidu</td></tr><tr><td align="left">data-type</td><td align="left">必须值</td><td align="left">song, playlist, album, search, artist</td></tr><tr><td align="left">data-fixed</td><td align="left">false</td><td align="left">开启固定模式</td></tr><tr><td align="left">data-mini</td><td align="left">false</td><td align="left">开启迷你模式</td></tr><tr><td align="left">data-autoplay</td><td align="left">false</td><td align="left">自动播放，移动端浏览器暂时不支持此功能</td></tr><tr><td align="left">data-theme</td><td align="left">#2980b9</td><td align="left">主题颜色</td></tr><tr><td align="left">data-loop</td><td align="left">all</td><td align="left">列表循环模式：all, one,none</td></tr><tr><td align="left">data-order</td><td align="left">list</td><td align="left">列表播放模式： list, random</td></tr><tr><td align="left">data-preload</td><td align="left">auto</td><td align="left">values: ‘none’, ‘metadata’, ‘auto</td></tr><tr><td align="left">data-volume</td><td align="left">0.7</td><td align="left">播放器音量</td></tr><tr><td align="left">data-mutex</td><td align="left">true</td><td align="left">该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td></tr><tr><td align="left">data-lrctype</td><td align="left">0</td><td align="left">歌词格式类型</td></tr><tr><td align="left">data-listfolded</td><td align="left">false</td><td align="left">指定音乐播放列表是否折叠</td></tr><tr><td align="left">data-listmaxheight</td><td align="left">340px</td><td align="left">播放列表的最大长度</td></tr><tr><td align="left">data-storagename</td><td align="left">metingjs</td><td align="left">LocalStorage 中存储播放器设定的键名</td></tr></tbody></table><blockquote><p>require代表着這些參數是必須要使用的，其它的參數則可以根據自己需要配置。</p></blockquote><blockquote><p>配置全局吸底，data-fixed和data-mini也必須配置，配置為true</p></blockquote><blockquote><p>如果使用Pjax，則在class裏需添加no-destroy，這樣防止切換頁面時Aplayer被銷毀</p></blockquote>]]></content>
       
       
       <categories>
@@ -116,31 +116,6 @@
         <tags>
             
             <tag> -music -音乐 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>今天6-9号</title>
-      <link href="2021/06/24/%E4%BB%8A%E5%A4%A96-9%E5%8F%B7/"/>
-      <url>2021/06/24/%E4%BB%8A%E5%A4%A96-9%E5%8F%B7/</url>
-      
-        <content type="html"><![CDATA[<p>今天是2021年6月9号，天气不错，出了个大太阳，距离我建立这个博客已经快俩个月了，因为之前也是忙于工作，所以进度缓慢，当然这中间也在维护升级，基于我也是第一次搞这个博客，都还没有好好写文章，毕竟人都爱美，一直在优化路上，这个加个啥呀，哪里加个啥呀，现在差不多了（嘿嘿，后面看到不错的再优化），是时候要开始我奋笔疾书的发展史了。</p><p>因为这篇算一个引子，也算我正式写的第一篇，这个博客不一定是技术博客啥的，因为刚开始的初心就是想记录一些好看的，好玩的，生活上的，当然也会有我自己记录的技术过程啥的。</p><p>​            </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 今天6-9号 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> -6/9 </tag>
             
         </tags>
       
@@ -199,31 +174,6 @@
     
     
     <entry>
-      <title>IU</title>
-      <link href="2021/04/13/iu/"/>
-      <url>2021/04/13/iu/</url>
-      
-        <content type="html"><![CDATA[<div class="justified-gallery"><p><img src="http://xiaozhidage.gitee.io/image_treasure-house/IU/1345249383.jpeg"></p>          </div>]]></content>
-      
-      
-      <categories>
-          
-          <category> IU,iu </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> -iu -明星 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>推荐一个图片网站</title>
       <link href="2021/04/13/images/"/>
       <url>2021/04/13/images/</url>
@@ -241,6 +191,31 @@
         <tags>
             
             <tag> -image -图片 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IU</title>
+      <link href="2021/04/13/iu/"/>
+      <url>2021/04/13/iu/</url>
+      
+        <content type="html"><![CDATA[<div class="justified-gallery"><p><img src="http://xiaozhidage.gitee.io/image_treasure-house/IU/1345249383.jpeg"></p>          </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> IU,iu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -iu -明星 </tag>
             
         </tags>
       

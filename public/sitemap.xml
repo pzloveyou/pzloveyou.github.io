@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.loveiu.top/music/index.html</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.loveiu.top/2021/07/10/music/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.loveiu.top/2021/04/13/images/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.loveiu.top/2021/04/13/hello-world/</loc>
+    
+    <lastmod>2022-05-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.loveiu.top/2022/05/17/Mongodb%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2022-05-17</lastmod>
@@ -9,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/2022/05/17/windows%E9%85%8D%E7%BD%AEftp/</loc>
+    <loc>https://www.loveiu.top/2022/05/17/Mongod%E6%9C%8D%E5%8A%A1%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/2022/05/17/Mongod%E6%9C%8D%E5%8A%A1%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://www.loveiu.top/2022/05/17/windows%E9%85%8D%E7%BD%AEftp/</loc>
     
     <lastmod>2022-05-17</lastmod>
     
@@ -72,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/2021/04/13/images/</loc>
-    
-    <lastmod>2022-05-17</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.loveiu.top/tags/index.html</loc>
     
     <lastmod>2022-05-16</lastmod>
@@ -87,20 +108,6 @@
   
   <url>
     <loc>https://www.loveiu.top/categories/index.html</loc>
-    
-    <lastmod>2022-05-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.loveiu.top/music/index.html</loc>
-    
-    <lastmod>2022-05-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.loveiu.top/2021/07/10/music/</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -128,21 +135,7 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/2021/06/24/%E4%BB%8A%E5%A4%A96-9%E5%8F%B7/</loc>
-    
-    <lastmod>2022-05-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.loveiu.top/2021/04/13/iu/</loc>
-    
-    <lastmod>2022-05-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.loveiu.top/2021/04/13/hello-world/</loc>
     
     <lastmod>2022-05-16</lastmod>
     
@@ -172,13 +165,6 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/tags/Hexo-%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.loveiu.top/tags/mybatis-%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
@@ -186,7 +172,7 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/tags/iu-%E6%98%8E%E6%98%9F/</loc>
+    <loc>https://www.loveiu.top/tags/Hexo-%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -194,6 +180,13 @@
   
   <url>
     <loc>https://www.loveiu.top/tags/image-%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2022-05-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.loveiu.top/tags/iu-%E6%98%8E%E6%98%9F/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -220,13 +213,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://www.loveiu.top/tags/6-9/</loc>
-    <lastmod>2022-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
@@ -237,14 +223,14 @@
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/categories/IU-iu/</loc>
+    <loc>https://www.loveiu.top/categories/image/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.loveiu.top/categories/image/</loc>
+    <loc>https://www.loveiu.top/categories/IU-iu/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -259,13 +245,6 @@
   
   <url>
     <loc>https://www.loveiu.top/categories/%E6%9D%8E%E7%9F%A5%E6%81%A9/</loc>
-    <lastmod>2022-05-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.loveiu.top/categories/%E4%BB%8A%E5%A4%A96-9%E5%8F%B7/</loc>
     <lastmod>2022-05-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

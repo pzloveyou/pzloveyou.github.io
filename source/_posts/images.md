@@ -10,7 +10,7 @@ toc_number: true
 date: 2021-04-13 00:00:00
 updated:
 categories: "image"
-top_img: transparent
+top_img: /img/640.png
 ---
 
 

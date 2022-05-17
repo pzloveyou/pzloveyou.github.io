@@ -7,7 +7,7 @@ tags:
   -技术
 keywords: "Mongodb服务教程"
 cover: /img/wallhaven-8o5rp1_1652751381.jpg
-top_img: transparent
+top_img: /img/wallhaven-8o5rp1_1652751381.jpg
 toc_number: true
 aside: true
 comments: true

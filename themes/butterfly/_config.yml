@@ -506,13 +506,13 @@ yandex_site_verification:
 
 theme_color:
    enable: true
-   main: "#e58a8a" # 文章颜色
+   main: "#889190" # 文章颜色
    paginator: "#00c4b6" # 分页器的颜色
-   button_hover: "#e58a8a" # 鼠标移动到按钮上的显示的颜色
+   button_hover: "#34af4e" # 鼠标移动到按钮上的显示的颜色
    text_selection: "#00c4b6" # 选择文字的背景颜色
-   link_color: "#e58a8a" # 链接颜色
+   link_color: "#00c4b6" # 链接颜色
    meta_color: "#858585"
-   hr_color: "#e58a8a" # 小剪刀颜色、小摩托颜色
+   hr_color: "#2b489b" # 小剪刀颜色、小摩托颜色
    code_foreground: "#F47466" # 代码`code`的颜色
    code_background: "rgba(27, 31, 35, .05)" # 代码`code`的背景颜色
    toc_color: "#00c4b6"
@@ -541,7 +541,7 @@ background:   linear-gradient(90deg,rgba(247, 149, 51, 0.1) 0,rgba(243, 112, 85,
 #linear-gradient(45deg,#6dd0f2 15%,#f59abe 85%);             # url(/myblog/./image/2/1615249544123.jpeg)
 
 # Footer Background
-footer_bg: true
+footer_bg: false
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:

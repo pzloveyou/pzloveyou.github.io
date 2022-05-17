@@ -11,7 +11,7 @@ date: 2021-07-10 11:17:00
 updated:
 categories: "music"
 aside: true
-top_img: transparent
+top_img: /img/wallhaven-y85z5g_1920x1080.jpg
 ---
 
 >hexo音乐插件 [hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
@@ -62,22 +62,22 @@ inject:
 
 | 选项 | 默认 | 描述 |
 |:----|:----|:----|
-|data-id| require |song id / playlist id / album id / search keyword|
-|data-server|require|music platform: netease, tencent, kugou, xiami, baidu|
-| data-type | require  | song, playlist, album, search, artist  |
-| data-fixed | false	  |  enable fixed mode |
-| data-mini | false  |  enable mini mode |
-| data-autoplay  | false  | audio autoplay  |
-|data-theme  | #2980b9	  | 	main color  |
-| data-loop |  all |  player loop play, values: 'all', 'one', 'none' |
-| data-order | list  |  player play order, values: 'list', 'random' |
+|data-id| 必须值 |歌曲 id / 播放列表 id / 相册 id / 搜索关键字|
+|data-server|必须值|音乐平台: netease, tencent, kugou, xiami, baidu|
+| data-type | 必须值  | song, playlist, album, search, artist  |
+| data-fixed | false	  | 开启固定模式 |
+| data-mini | false  |  开启迷你模式 |
+| data-autoplay  | false  | 自动播放，移动端浏览器暂时不支持此功能  |
+|data-theme  | #2980b9	  | 	主题颜色  |
+| data-loop |  all |  列表循环模式：all, one,none |
+| data-order | list  |  列表播放模式： list, random |
 | data-preload | auto  |  values: 'none', 'metadata', 'auto |
-|data-volume  | 0.7  | default volume, notice that player will remember user setting, default volume will not work after user set volume themselves  |
-| data-mutex | true  | prevent to play multiple player at the same time, pause other players when this player start play  |
-| data-lrctype |  0 | lyric type  |
-| data-listfolded |  false |  indicate whether list should folded at first |
-| data-listmaxheight |  340px |  list max height |
-| data-storagename |  metingjs |  localStorage key that store player setting |
+|data-volume  | 0.7  | 播放器音量  |
+| data-mutex | true  |该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停  |
+| data-lrctype |  0 | 歌词格式类型  |
+| data-listfolded |  false |  指定音乐播放列表是否折叠 |
+| data-listmaxheight |  340px |  播放列表的最大长度 |
+| data-storagename |  metingjs |  LocalStorage 中存储播放器设定的键名 |
 >require代表着這些參數是必須要使用的，其它的參數則可以根據自己需要配置。
  
 > 配置全局吸底，data-fixed和data-mini也必須配置，配置為true

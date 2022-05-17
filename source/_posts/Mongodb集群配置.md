@@ -7,7 +7,7 @@ tags:
   -技术
 keywords: "Mongodb 集群部署,Mongodb"
 cover: /img/wallhaven-e7xevr.jpg
-top_img: transparent
+top_img: /img/wallhaven-e7xevr.jpg
 toc_number: true
 aside: true
 comments: true
