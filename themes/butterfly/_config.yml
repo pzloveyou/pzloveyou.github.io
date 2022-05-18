@@ -277,7 +277,7 @@ comments:
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   use:
     - Twikoo
-    - Valine
+    #- Valine
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -375,9 +375,10 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: loveiu-9g2li4dcee53bbd7
+  #envId: loveiu-9g2li4dcee53bbd7
+  envId: https://twikoo-git-dev-pzloveyou.vercel.app/
   region:
-  visitor: false
+  visitor: true
   option:
 
 # Chat Services
@@ -733,7 +734,7 @@ newest_comments:
   storage: 10 # unit: mins, save data to localStorage
   avatar: true
   # You can only choose one, or neither
-  valine: true
+  valine: false
   github_issues:
     enable: false
     repo:
@@ -882,12 +883,17 @@ css_prefix: true
 inject:
   head:
     - <meta name="viewport">
+    - <meta name="referrer" content="origin-when-cross-origin">
     - <link rel="stylesheet" href="https://at.alicdn.com/t/font_2492531_8fw76pwhl1n.css">
     - <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    - <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 #    - <link rel="manifest" href="/pwa/manifest.json">
     - <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    - <link href="/wqj/sds.css">
-    - <scripe src="/wqj/sds.js"></script>
+#    - <link href="/wqj/sds.css">
+#    - <script src="/wqj/sds.js"></script>
+    - <script src="/js/sweetalert_two.js"></script>
+    - <script type="text/javascript" src ="/js/welcome.js" ></script>
+    - <link  rel="stylesheet" href="/css/sweetalert.css"></link>
   bottom:
     - <style type="text/css">#toggle-sidebar {left:100px}</style>
     - <div class="aplayer no-destroy" data-id="2153548870" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
@@ -916,7 +922,8 @@ CDN:
   disqusjs: https://unpkg.com/disqusjs@1/dist/disqus.js
   disqusjs_css: https://unpkg.com/disqusjs@1/dist/disqusjs.css
   utterances: https://utteranc.es/client.js
-  twikoo: https://unpkg.com/twikoo@1.3.1/dist/twikoo.all.min.js
+  #twikoo: https://unpkg.com/twikoo@1.5.10/dist/twikoo.all.min.js
+  twikoo: https://cdn.staticfile.org/twikoo/1.5.10/twikoo.all.min.js
 
   waline: https://cdn.bootcdn.net/ajax/libs/waline/2.0.7/waline.min.js
 
