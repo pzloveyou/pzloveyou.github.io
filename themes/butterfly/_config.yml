@@ -886,7 +886,7 @@ inject:
     - <meta name="referrer" content="origin-when-cross-origin">
     - <link rel="stylesheet" href="https://at.alicdn.com/t/font_2492531_8fw76pwhl1n.css">
     - <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    - <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  #  - <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 #    - <link rel="manifest" href="/pwa/manifest.json">
     - <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 #    - <link href="/wqj/sds.css">
@@ -929,8 +929,8 @@ CDN:
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
-  sharejs: https://unpkg.zhimg.com/social-share.js/dist/js/social-share.min.js
-  sharejs_css: https://unpkg.zhimg.com/social-share.js/dist/css/share.min.css
+  sharejs: https://unpkg.com/social-share.js/dist/js/social-share.min.js
+  sharejs_css: https://unpkg.com/social-share.js/dist/css/share.min.css
 
   # search
   local_search: /js/search/local-search.js
@@ -962,25 +962,25 @@ CDN:
  # instantpage: https://cdn.bootcdn.net/ajax/libs/instant.page/5.0.1/instantpage.min.js
   instantpage: https://instant.page/5.1.0
   typed: https://unpkg.zhimg.com/typed.js/lib/typed.min.js
-  pangu: https://unpkg.zhimg.com/pangu/dist/browser/pangu.min.js
+  pangu: https://unpkg.com/pangu/dist/browser/pangu.min.js
 
   # photo
-  fancybox_css: https://unpkg.zhimg.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
+  fancybox_css: https://unpkg.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
   fancybox: https://unpkg.zhimg.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
   medium_zoom: https://unpkg.zhimg.com/medium-zoom/dist/medium-zoom.min.js
 
   # snackbar
-  snackbar_css: https://unpkg.zhimg.com/node-snackbar/dist/snackbar.min.css
-  snackbar: https://unpkg.zhimg.com/node-snackbar/dist/snackbar.min.js
+  snackbar_css: https://unpkg.com/node-snackbar/dist/snackbar.min.css
+  snackbar: https://unpkg.com/node-snackbar/dist/snackbar.min.js
 
   # effect
   activate_power_mode: https://unpkg.zhimg.com/butterfly-extsrc@1/dist/activate-power-mode.min.js
   fireworks: https://unpkg.zhimg.com/butterfly-extsrc@1/dist/fireworks.min.js
   click_heart: https://unpkg.com/butterfly-extsrc@1/dist/click-heart.min.js
-  ClickShowText: https://unpkg.zhimg.com/butterfly-extsrc@1/dist/click-show-text.min.js
+  ClickShowText: https://unpkg.com/butterfly-extsrc@1/dist/click-show-text.min.js
 
   # fontawesome
-  fontawesome: https://unpkg.zhimg.com/@fortawesome/fontawesome-free/css/all.min.css
+  fontawesome: https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css
 
   # Conversion between Traditional and Simplified Chinese
   translate: /js/tw_cn.js
@@ -990,10 +990,10 @@ CDN:
   justifiedGallery_css: https://unpkg.com/justifiedGallery/dist/css/justifiedGallery.min.css
 
   # aplayer
-  aplayer_css: https://unpkg.zhimg.com/aplayer/dist/APlayer.min.css
-  aplayer_js: https://unpkg.zhimg.com/aplayer/dist/APlayer.min.js
+  aplayer_css: https://unpkg.com/aplayer/dist/APlayer.min.css
+  aplayer_js: https://unpkg.com/aplayer/dist/APlayer.min.js
   #meting_js: https://unpkg.zhimg.com/metowolf/MetingJS@1.2/dist/Meting.min.js
-  meting_js: https://unpkg.zhimg.com/meting@1.2.0/dist/Meting.min.js
+  meting_js: https://unpkg.com/meting@1.2.0/dist/Meting.min.js
 
   # Prism.js
   prismjs_js: https://unpkg.com/prismjs/prism.min.js
