@@ -5,7 +5,7 @@ tags:
   -iu
   -明星
 keywords: "iu,明星"  
-cover: /img/v21440w.jpg
+cover: /img/21.jpg
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:

@@ -5,12 +5,12 @@ tags:
   -Hexo
   -教程
 keywords: "Hexo,教程"  
-cover: /img/wallhaven-l38kvy.jpg
+cover: /img/38.jpg
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:
 categories: hello-world
-top_img: /img/wallhaven-l38kvy.jpg
+top_img: /img/38.jpg
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

@@ -1,6 +1,6 @@
 ---
 title: 音乐
-top_img: /img/wallhaven-wq1gk7_1920x1080_1652683488.jpg
+top_img: /img/77.jpg
 comments: false
 type: "playlist"
 aside: false

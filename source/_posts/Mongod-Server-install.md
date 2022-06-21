@@ -6,8 +6,8 @@ tags:
   -Windows
   -技术
 keywords: "Mongodb服务教程"
-cover: /img/wallhaven-8o5rp1_1652751381.jpg
-top_img: /img/wallhaven-8o5rp1_1652751381.jpg
+cover: /img/80.jpg
+top_img: /img/80.jpg
 toc_number: true
 aside: true
 comments: true

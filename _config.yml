@@ -167,6 +167,10 @@ baidu_url_submit:
   token: hailv56c93aM17b4      # 秘钥
   path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
 
+#自动切换cdn地址
+jsdelivr_auto_fallback:
+  enable: false
+  add_defer: false
 
 
 #pwa:

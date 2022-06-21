@@ -6,8 +6,8 @@ tags:
   -Windows
   -技术
 keywords: "Mongodb 集群部署,Mongodb"
-cover: /img/wallhaven-e7xevr.jpg
-top_img: /img/wallhaven-e7xevr.jpg
+cover: /img/7.jpg
+top_img: /img/7.jpg
 toc_number: true
 aside: true
 comments: true

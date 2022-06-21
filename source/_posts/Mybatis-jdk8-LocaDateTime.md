@@ -6,8 +6,8 @@ tags:
   -mybatis
   -技术
 keywords: "Mybatis映射LocalDateTime所出现的问题,mybatis映射"
-cover: /img/wallhaven-wq1gk7_1920x1080_1652683488.jpg
-top_img: /img/wallhaven-wq1gk7_1920x1080_1652683488.jpg
+cover: /img/77.jpg
+top_img: /img/77.jpg
 toc_number: true
 aside: true
 comments: true

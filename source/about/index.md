@@ -5,7 +5,7 @@ updated:
 type: "about"
 description: 关于
 keywords: 关于
-top_img: /img/wallhaven-l38kjq_1652685606.jpg
+top_img: /img/38.jpg
 aside: false
 comments: true
 ---

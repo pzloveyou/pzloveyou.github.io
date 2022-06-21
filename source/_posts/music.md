@@ -5,13 +5,13 @@ tags:
   -music
   -音乐
 keywords: "hexo音乐,hexo音乐配置hexo-buffter"  
-cover: /img/wallhaven-y85z5g_1920x1080.jpg
+cover: /img/85.jpg
 toc_number: true
 date: 2021-07-10 11:17:00
 updated:
 categories: "music"
 aside: true
-top_img: /img/wallhaven-y85z5g_1920x1080.jpg
+top_img: /img/85.jpg
 ---
 
 >hexo音乐插件 [hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)

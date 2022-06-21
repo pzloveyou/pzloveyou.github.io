@@ -2,11 +2,12 @@ function welcome() {
     let welcome_text='欢迎光顾本知恩的小窝!';
     console.log(111,document.referrer)
     console.log(222,document.domain)
-    if(document.referrer!==''){
+    if(document.referrer&&document.referrer!==''){
         let referrer=document.referrer.split("/")[2];
         welcome_text="欢迎你，来自"+referrer.toUpperCase()+"的用户！";
         console.log(222,document.referrer.split("/"))
         console.log(222,document.domain)
+
         if(referrer.toUpperCase()==document.domain.toUpperCase())return;
     }
     swal({

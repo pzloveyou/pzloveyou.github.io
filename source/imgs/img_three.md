@@ -1,6 +1,6 @@
 ---
 title: MY Gril
-top_img: /img/wallhaven-pko8lm_1920x1080.jpg
+top_img: /img/81.jpg
 comments: false
 aside: false
 ---

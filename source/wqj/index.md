@@ -5,8 +5,8 @@ aplayer: true
 tags:
   -技术
 keywords: "圣诞树2021，圣诞树"
-cover: /img/wallhaven-m91yg1_3840x2160_1652668493.jpg
-top_img: /img/wallhaven-m91yg1_3840x2160_1652668493.jpg
+cover: /img/91.jpg
+top_img: /img/91.jpg
 toc_number: true
 aside: false
 comments: false

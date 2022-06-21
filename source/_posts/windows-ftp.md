@@ -6,8 +6,8 @@ tags:
   -Windows
   -技术
 keywords: "Windows配置FTP,FTP"
-cover: /img/wallhaven-8o5dq2_1652751459.jpg
-top_img: /img/wallhaven-8o5dq2_1652751459.jpg
+cover: /img/89.jpg
+top_img: /img/89.jpg
 toc_number: true
 aside: true
 comments: true
