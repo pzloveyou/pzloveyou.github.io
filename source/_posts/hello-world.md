@@ -2,9 +2,8 @@
 title: Hello World
 aplayer: true
 tags:
-  -Hexo
-  -教程
-keywords: "Hexo,教程"  
+  -IU
+keywords: "iu"  
 cover: /img/38.jpg
 toc_number: true
 date: 2021-04-13 00:00:00

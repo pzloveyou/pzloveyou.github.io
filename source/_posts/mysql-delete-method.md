@@ -3,12 +3,13 @@ title: MySQL数据库如何快速删除千万，亿条数据
 date: 2021-07-27 16:29:35
 aplayer: true
 tags:
-  -mysql
+  -踩坑
   -技术
 keywords: "MySQL数据库如何快速删除千万，亿条数据,mysql删除"
 cover: /img/91.jpg
 top_img: /img/91.jpg
 toc_number: true
+categories: "踩坑"
 aside: true
 comments: true
 ---

@@ -3,13 +3,14 @@ title: Mybatis映射LocalDateTime所出现的问题
 date: 2021-07-28 11:38:35
 aplayer: true
 tags:
-  -mybatis
+  -踩坑
   -技术
 keywords: "Mybatis映射LocalDateTime所出现的问题,mybatis映射"
 cover: /img/77.jpg
 top_img: /img/77.jpg
 toc_number: true
 aside: true
+categories: "踩坑"
 comments: true
 ---
   ## **Mybatis映射LocalDateTime所出现的问题**

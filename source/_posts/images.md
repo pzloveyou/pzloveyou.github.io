@@ -3,7 +3,6 @@ title: 推荐一个图片网站
 aplayer: true
 tags:
   -image
-  -图片
 keywords: "图片,image"  
 cover: /img/640.png
 toc_number: true

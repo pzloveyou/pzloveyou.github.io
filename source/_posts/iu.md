@@ -3,13 +3,12 @@ title: IU
 aplayer: true
 tags:
   -iu
-  -明星
 keywords: "iu,明星"  
 cover: /img/21.jpg
 toc_number: true
 date: 2021-04-13 00:00:00
 updated:
-categories: "IU,iu"
+categories: "iu"
 top_img: transparent
 ---
 

@@ -4,14 +4,13 @@ aplayer: true
 sticky: 2
 tags:
   -iu
-  -明星
   -男盆友
-keywords: "iu,明星,男盆友"  
+keywords: "iu,男盆友"  
 cover: /img/40w.jpg
 toc_number: true
 date: 2021-04-15 00:00:00
 updated:
-categories: "李知恩"
+categories: "iu"
 top_img: /img/40w.jpg
 ---
 

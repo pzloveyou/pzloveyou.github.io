@@ -3,13 +3,14 @@ title: Mongodb服务教程
 date: 2022-05-17 15:29:35
 aplayer: true
 tags:
-  -Windows
+  -踩坑
   -技术
 keywords: "Mongodb服务教程"
 cover: /img/80.jpg
 top_img: /img/80.jpg
 toc_number: true
 aside: true
+categories: "踩坑"
 comments: true
 ---
 ### 1.Mongodb服务教程

@@ -3,12 +3,13 @@ title: Mongodb 集群部署
 date: 2022-05-17 15:29:35
 aplayer: true
 tags:
-  -Windows
+  -踩坑
   -技术
 keywords: "Mongodb 集群部署,Mongodb"
 cover: /img/7.jpg
 top_img: /img/7.jpg
 toc_number: true
+categories: "踩坑"
 aside: true
 comments: true
 ---

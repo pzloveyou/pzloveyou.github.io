@@ -3,12 +3,13 @@ title: Windows配置FTP
 date: 2022-05-17 15:29:35
 aplayer: true
 tags:
-  -Windows
+  -踩坑
   -技术
 keywords: "Windows配置FTP,FTP"
 cover: /img/89.jpg
 top_img: /img/89.jpg
 toc_number: true
+categories: "踩坑"
 aside: true
 comments: true
 ---
