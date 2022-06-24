@@ -1,0 +1,1 @@
+"use strict";var backimg=["url(/img/77.jpg)","url(/img/85.jpg)","url(/img/79.jpg)","url(/img/80.jpg)","url(/img/91.jpg)"],bgindex=Math.ceil(Math.random()*(backimg.length-1)),web=document.getElementById("web_bgs");web.style.backgroundImage=backimg[bgindex];
