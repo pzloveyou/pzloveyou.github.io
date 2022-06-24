@@ -1,0 +1,12 @@
+#web_bgs {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -999;
+    background-attachment: local;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
