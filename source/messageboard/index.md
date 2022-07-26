@@ -9,10 +9,8 @@ keywords: "留言板，畅所欲言"
 top_img:
 mathjax:
 katex:
-aside: true
+aside: false
 aplayer: true
-highlight_shrink:
 ---
-
 
 

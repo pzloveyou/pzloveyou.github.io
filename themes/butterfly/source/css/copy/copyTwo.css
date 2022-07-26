@@ -106,11 +106,12 @@ a {
     background: transparent !important;
 }
 
+/*文章封面渐变色*/
 .recent-post-item{
     background: radial-gradient(transparent, white);
 }
 
-/*文章封面*/
+/*文章封面字体*/
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap {
     color: black !important;
 }

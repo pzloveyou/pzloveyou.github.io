@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updated: 
+updated:
 type: {{ type }}
 comments:
 description:

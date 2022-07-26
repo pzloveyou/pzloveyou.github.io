@@ -42,7 +42,7 @@ replSet=skeqi
 
 #### 二、准备启动
 
-进入mongod\bin下，使用管理员启动cmd分别输入
+电脑搜索PowerShell，进入到mongod\bin，输入下面（路径按自己实际位置来）
 
 ```
 mongod --config D:\BtSoft\mongodb\data\mongodb1\conf\mongodb.conf --install --serviceName "MongoDB1"
@@ -50,14 +50,15 @@ mongod --config D:\BtSoft\mongodb\data\mongodb2\conf\mongodb.conf --install --se
 mongod --config D:\BtSoft\mongodb\data\mongodb3\conf\mongodb.conf --install --serviceName "MongoDB3"
 ```
 
-然后进入服务，打开对应的3个MongoDB
+然后电脑搜索服务，打开找到对应的3个MongoDB服务，启动并设置自动
 
-在cmd（mongod\bin目录下）输入 mongo –port 27011
+然后重新打开一个cmd（mongod\bin目录下）输入 mongo –port 27011，然后再输入：
 
 ```xml
 use admin;
-cfg = {_id: "skeqi",members:[{_id: 0,host: '192.168.7.27:27011',priority: 2},{_id: 1,host: '192.168.7.27:27012',priority: 1},{_id: 3,host: '192.168.7.27:27013',arbiterOnly: true}]};
+cfg = {_id: "skeqi",members:[{_id: 0,host: '127.0.0.1:27011',priority: 2},{_id: 1,host: '127.0.0.1:27012',priority: 1},{_id: 3,host: '127.0.0.1:27013',arbiterOnly: true}]};
 rs.initiate(cfg)
 rs.status()
 ```
 
+中间无任何报错即成功了。

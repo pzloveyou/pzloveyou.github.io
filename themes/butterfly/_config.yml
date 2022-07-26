@@ -12,6 +12,7 @@ menu:
      标签: /tags/ || iconfont icon-chuangzuo-tianchong
      分类: /categories/ || iconfont icon-nightstand
    留言板: /messageboard/ || iconfont icon-telephone
+   说说: /artitalk/ || iconfont icon-telephone
    生活||iconfont icon-cha:
      音乐: /music/ || iconfont icon-music
      图库: /imgs/ || iconfont icon-xiangce
@@ -1012,5 +1013,15 @@ CDN:
   prismjs_autoloader: https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js
 
 
+## Artitalk说说
+  #  # see https://artitalk.js.org/
+artitalk:
+  enable: true
+  appId: WcaOF8gCx7mF2esh9tFkCgTj-MdYXbMMI
+  appKey: XHImwffiMPMkx7yPLBlnP5xd
+  path: /artitalk/
+  js: https://unpkg.com/artitalk
+  option:
+  front_matter: {title: 说说,date: 2021-06-25 08:26:08,updated: ,type: "artitalk",description: 说说,keywords: 说说,aside: false,comments: true}
 
 
