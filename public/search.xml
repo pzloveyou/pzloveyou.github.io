@@ -104,11 +104,11 @@
     
     
     <entry>
-      <title>Mongodb 集群部署</title>
+      <title>Mongodb 副本集部署</title>
       <link href="20220517/Mongodb-Cluster-deployment/"/>
       <url>20220517/Mongodb-Cluster-deployment/</url>
       
-        <content type="html"><![CDATA[<h1 id="Mongodb-集群部署"><a href="#Mongodb-集群部署" class="headerlink" title="Mongodb 集群部署"></a>Mongodb 集群部署</h1><p><strong>Mongodb 版本&gt;=4.2windows不以服务式安装</strong></p><h4 id="一、安装完成后设置目录下data里面间分区"><a href="#一、安装完成后设置目录下data里面间分区" class="headerlink" title="一、安装完成后设置目录下data里面间分区"></a>一、安装完成后设置目录下data里面间分区</h4><p>1.建立mongodb1文件夹</p><p>2.在mongodb1下建立 conf与log文件夹</p><p>3.在conf文件夹下建立 mongodb.conf</p><p>内容为：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dbpath=D:\BtSoft\mongodb\data\mongodb1 #修改路径</span><br><span class="line">logpath=D:\BtSoft\mongodb\data\mongodb1\log\mongodb.log #修改路径</span><br><span class="line">logappend=true</span><br><span class="line">bind_ip=0.0.0.0</span><br><span class="line">port=27011 #修改端口</span><br><span class="line">shardsvr=true</span><br><span class="line">journal=true</span><br><span class="line">replSet=skeqi</span><br></pre></td></tr></table></figure><p>3.复制mongodb1为 mongodb2 mongodb3 并分别修改 mongodb.conf 里的路径与端口（同样操作）</p><h4 id="二、准备启动"><a href="#二、准备启动" class="headerlink" title="二、准备启动"></a>二、准备启动</h4><p>电脑搜索PowerShell，进入到mongod\bin，输入下面（路径按自己实际位置来）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb1\conf\mongodb.conf --install --serviceName &quot;MongoDB1&quot;</span><br><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb2\conf\mongodb.conf --install --serviceName &quot;MongoDB2&quot;</span><br><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb3\conf\mongodb.conf --install --serviceName &quot;MongoDB3&quot;</span><br></pre></td></tr></table></figure><p>然后电脑搜索服务，打开找到对应的3个MongoDB服务，启动并设置自动</p><p>然后重新打开一个cmd（mongod\bin目录下）输入 mongo –port 27011，然后再输入：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use admin;</span><br><span class="line">cfg = &#123;_id: &quot;skeqi&quot;,members:[&#123;_id: 0,host: &#x27;127.0.0.1:27011&#x27;,priority: 2&#125;,&#123;_id: 1,host: &#x27;127.0.0.1:27012&#x27;,priority: 1&#125;,&#123;_id: 3,host: &#x27;127.0.0.1:27013&#x27;,arbiterOnly: true&#125;]&#125;;</span><br><span class="line">rs.initiate(cfg)</span><br><span class="line">rs.status()</span><br></pre></td></tr></table></figure><p>中间无任何报错即成功了。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Mongodb-副本集部署"><a href="#Mongodb-副本集部署" class="headerlink" title="Mongodb 副本集部署"></a>Mongodb 副本集部署</h1><p><strong>Mongodb 版本&gt;=4.2windows不以服务式安装</strong></p><h4 id="一、安装完成后设置目录下data里面间分区"><a href="#一、安装完成后设置目录下data里面间分区" class="headerlink" title="一、安装完成后设置目录下data里面间分区"></a>一、安装完成后设置目录下data里面间分区</h4><p>1.建立mongodb1文件夹</p><p>2.在mongodb1下建立 conf与log文件夹</p><p>3.在conf文件夹下建立 mongodb.conf</p><p>内容为：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dbpath=D:\BtSoft\mongodb\data\mongodb1  #修改路径</span><br><span class="line">logpath=D:\BtSoft\mongodb\data\mongodb1\log\mongodb.log #修改路径</span><br><span class="line">logappend=true</span><br><span class="line">bind_ip=0.0.0.0</span><br><span class="line">port=27011 #修改端口</span><br><span class="line">shardsvr=true</span><br><span class="line">journal=true</span><br><span class="line">replSet=skeqi</span><br></pre></td></tr></table></figure><p>3.复制mongodb1为 mongodb2 mongodb3 并分别修改 mongodb.conf 里的路径与端口（同样操作）</p><h4 id="二、准备启动"><a href="#二、准备启动" class="headerlink" title="二、准备启动"></a>二、准备启动</h4><p>电脑搜索PowerShell，进入到mongod\bin，输入下面（路径按自己实际位置来，以管理员启动需要授权）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb1\conf\mongodb.conf --install --serviceName &quot;MongoDB1&quot; --serviceDisplayName &quot;Mongodb1&quot;</span><br><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb2\conf\mongodb.conf --install --serviceName &quot;MongoDB2&quot; --serviceDisplayName &quot;Mongodb2&quot;</span><br><span class="line">mongod --config D:\BtSoft\mongodb\data\mongodb3\conf\mongodb.conf --install --serviceName &quot;MongoDB3&quot; --serviceDisplayName &quot;Mongodb3&quot;</span><br></pre></td></tr></table></figure><p>然后电脑搜索服务，打开找到对应的3个MongoDB服务，启动并设置自动</p><p>然后重新打开一个cmd（mongod\bin目录下）输入 mongo –port 27011，然后再输入：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use admin;</span><br><span class="line">cfg = &#123;_id: &quot;skeqi&quot;,members:[&#123;_id: 0,host: &#x27;127.0.0.1:27011&#x27;,priority: 2&#125;,&#123;_id: 1,host: &#x27;127.0.0.1:27012&#x27;,priority: 1&#125;,&#123;_id: 3,host: &#x27;127.0.0.1:27013&#x27;,arbiterOnly: true&#125;]&#125;;</span><br><span class="line">rs.initiate(cfg)</span><br><span class="line">rs.status()</span><br></pre></td></tr></table></figure><p>中间无任何报错即成功了。</p>]]></content>
       
       
       <categories>
@@ -230,8 +230,8 @@
     
     <entry>
       <title>李知恩的男盆友</title>
-      <link href="20210415/iu-BoyFriend/"/>
-      <url>20210415/iu-BoyFriend/</url>
+      <link href="20210414/iu-BoyFriend/"/>
+      <url>20210414/iu-BoyFriend/</url>
       
         <content type="html"><![CDATA[<p>李知恩的男朋友出现了！<br>李知恩的男朋友出现了！</p>]]></content>
       
@@ -255,8 +255,8 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="20210413/hello-world/"/>
-      <url>20210413/hello-world/</url>
+      <link href="20210412/hello-world/"/>
+      <url>20210412/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a> </p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
@@ -280,8 +280,8 @@
     
     <entry>
       <title>推荐一个图片网站</title>
-      <link href="20210413/images/"/>
-      <url>20210413/images/</url>
+      <link href="20210412/images/"/>
+      <url>20210412/images/</url>
       
         <content type="html"><![CDATA[<h3 id="存几个个图片网站"><a href="#存几个个图片网站" class="headerlink" title="存几个个图片网站."></a>存几个个图片网站.</h3><p>   宝藏地址:<br>   1.<a href="https://wallhaven.cc/">https://wallhaven.cc/</a><br>   <a href="https://imgtu.com/i/RHO0r6"><img src= "/img/loading.gif" data-lazy-src="https://z3.ax1x.com/2021/07/07/RHO0r6.png" alt="RHO0r6.png"></a><br>   2.<a href="https://unsplash.com/">https://unsplash.com/</a><br>   <a href="https://imgtu.com/i/RHOwKx"><img src= "/img/loading.gif" data-lazy-src="https://z3.ax1x.com/2021/07/07/RHOwKx.png" alt="RHOwKx.png"></a><br>   3.<a href="https://wallpapercave.com/">https://wallpapercave.com/</a><br>   <a href="https://imgtu.com/i/RHOax1"><img src= "/img/loading.gif" data-lazy-src="https://z3.ax1x.com/2021/07/07/RHOax1.png" alt="RHOax1.png"></a></p>]]></content>
       
@@ -305,8 +305,8 @@
     
     <entry>
       <title>IU</title>
-      <link href="20210413/iu/"/>
-      <url>20210413/iu/</url>
+      <link href="20210412/iu/"/>
+      <url>20210412/iu/</url>
       
         <content type="html"><![CDATA[<div class="justified-gallery"><p><img src= "/img/loading.gif" data-lazy-src="http://xiaozhidage.gitee.io/image_treasure-house/IU/1345249383.jpeg"></p>          </div>]]></content>
       

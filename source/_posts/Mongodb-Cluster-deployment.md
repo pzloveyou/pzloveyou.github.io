@@ -1,11 +1,11 @@
 ---
-title: Mongodb 集群部署
+title: Mongodb 副本集部署
 date: 2022-05-17 15:29:35
 aplayer: true
 tags:
   -踩坑
   -技术
-keywords: "Mongodb 集群部署,Mongodb"
+keywords: "Mongodb 副本集部署,Mongodb"
 cover: /img/7.jpg
 top_img: /img/7.jpg
 toc_number: true
@@ -13,7 +13,7 @@ categories: "踩坑"
 aside: true
 comments: true
 ---
-# Mongodb 集群部署
+# Mongodb 副本集部署
 
 **Mongodb 版本>=4.2windows不以服务式安装**
 
@@ -28,7 +28,7 @@ comments: true
 内容为：
 
 ```xml
-dbpath=D:\BtSoft\mongodb\data\mongodb1 #修改路径
+dbpath=D:\BtSoft\mongodb\data\mongodb1  #修改路径
 logpath=D:\BtSoft\mongodb\data\mongodb1\log\mongodb.log #修改路径
 logappend=true
 bind_ip=0.0.0.0
@@ -42,12 +42,12 @@ replSet=skeqi
 
 #### 二、准备启动
 
-电脑搜索PowerShell，进入到mongod\bin，输入下面（路径按自己实际位置来）
+电脑搜索PowerShell，进入到mongod\bin，输入下面（路径按自己实际位置来，以管理员启动需要授权）
 
 ```
-mongod --config D:\BtSoft\mongodb\data\mongodb1\conf\mongodb.conf --install --serviceName "MongoDB1"
-mongod --config D:\BtSoft\mongodb\data\mongodb2\conf\mongodb.conf --install --serviceName "MongoDB2"
-mongod --config D:\BtSoft\mongodb\data\mongodb3\conf\mongodb.conf --install --serviceName "MongoDB3"
+mongod --config D:\BtSoft\mongodb\data\mongodb1\conf\mongodb.conf --install --serviceName "MongoDB1" --serviceDisplayName "Mongodb1"
+mongod --config D:\BtSoft\mongodb\data\mongodb2\conf\mongodb.conf --install --serviceName "MongoDB2" --serviceDisplayName "Mongodb2"
+mongod --config D:\BtSoft\mongodb\data\mongodb3\conf\mongodb.conf --install --serviceName "MongoDB3" --serviceDisplayName "Mongodb3"
 ```
 
 然后电脑搜索服务，打开找到对应的3个MongoDB服务，启动并设置自动
