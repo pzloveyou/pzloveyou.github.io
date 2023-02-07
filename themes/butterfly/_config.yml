@@ -21,6 +21,7 @@ menu:
    其他链接||fas fa-list:
       Gitee Page: https://xiaozhidage.gitee.io || iconfont icon-gitee-copy
       Github Page: https://pzloveyou.github.io || iconfont icon-GitHub1-copy
+      OSRC Page:  https://xiaozhi.osrc.com || iconfont icon-GitHub1-copy
 #   友链: /link/ || fas fa-link
    关于作者: /about/ || iconfont icon-sun
 
@@ -380,7 +381,7 @@ facebook_comments:
 # https://github.com/imaegoo/twikoo
 twikoo:
   #envId: loveiu-9g2li4dcee53bbd7
-  envId: https://twikoo-git-dev-pzloveyou.vercel.app/
+  envId: https://twikoo.loveiu.top/
   region:
   visitor: true
   option:
